@@ -12,7 +12,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 option(MOVIES "Compile support for movie playback (requires gstreamer)" ON)
 option(MDVIEW "Enable viewing Markdown notes (requires webkit2gtk)" ON)
-option(REST "Compile support for REST server (requires libsoup and libqrencode)" ON)
+option(REST "Compile support for REST server (requires libsoup and libqrencode)" OFF)
 
 if (REST AND MDVIEW)
   message(FATAL_ERROR "REST and MDVIEW cannot be activated simultaneously due to incompatible library requirements")
