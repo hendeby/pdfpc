@@ -33,8 +33,8 @@ if (MDVIEW OR REST)
 endif ()
 
 if (MDVIEW)
-    pkg_check_modules(WEBKIT REQUIRED webkit2gtk-4.0)
-    set(MDVIEW_PACKAGES webkit2gtk-4.0)
+    pkg_check_modules(WEBKIT REQUIRED webkit2gtk-4.1)
+    set(MDVIEW_PACKAGES webkit2gtk-4.1)
 endif ()
 
 if (REST)
