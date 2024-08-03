@@ -14,6 +14,10 @@ option(MOVIES "Compile support for movie playback (requires gstreamer)" ON)
 option(MDVIEW "Enable viewing Markdown notes (requires webkit2gtk)" ON)
 option(REST "Compile support for REST server (requires libsoup and libqrencode)" ON)
 
+if (REST AND MDVIEW)
+  message(FATAL_ERROR "REST and MDVIEW cannot be activated simultaneously due to incompatible library requirements")
+endif(REST AND MDVIEW)
+
 add_subdirectory(src)
 add_subdirectory(icons)
 add_subdirectory(man)
